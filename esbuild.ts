@@ -9,7 +9,7 @@ const buildOptions: esbuild.BuildOptions = {
   minify: process.env.PI_ENV === "production",
   treeShaking: true,
   platform: "node",
-  format: "esm",
+  format: "cjs", // ✅ CHỈ sửa dòng này từ 'esm' thành 'cjs'
   target: "es2020",
   define: {
     "process.env.PI_ENV": `"${process.env.PI_ENV || "development"}"`,
